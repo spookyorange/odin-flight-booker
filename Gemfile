@@ -14,7 +14,6 @@ group :production do
   gem 'pg', '~> 1.2', '>= 1.2.3'
 end
 
-gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'simple_form', '~> 5.1'
 gem 'bulma-rails', '~> 0.9.2'
 # Use Puma as the app server
