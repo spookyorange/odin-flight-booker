@@ -32,6 +32,6 @@ Flight.create(departure_airport_id: 9, arrival_airport_id: 3, start_date: DateTi
 Flight.create(departure_airport_id: 3, arrival_airport_id: 5, start_date: DateTime.new(2022, 2, 12, 16, 40, 00), duration: 220)
 Flight.create(departure_airport_id: 1, arrival_airport_id: 3, start_date: DateTime.new(2023, 1, 1, 20, 23, 00), duration: 140)
 Flight.create(departure_airport_id: 5, arrival_airport_id: 4, start_date: DateTime.new(2025, 5, 15, 15, 25, 00), duration: 148)
-Flight.create(departure_airport_id: 2, arrival_airport_id: 6, start_date: DateTime.new(2022, 3, 45, 12, 30, 00), duration: 58)
-Flight.create(departure_airport_id: 3, arrival_airport_id: 8, start_date: DateTime.new(2048, 4, 16, 08, 32, 00), duration: 120)
+Flight.create(departure_airport_id: 2, arrival_airport_id: 6, start_date: DateTime.new(2022, 3, 25, 12, 30, 00), duration: 58)
+Flight.create(departure_airport_id: 3, arrival_airport_id: 8, start_date: DateTime.new(2021, 4, 16, 9, 32, 00), duration: 120)
 Flight.create(departure_airport_id: 1, arrival_airport_id: 4, start_date: DateTime.new(2022, 2, 22, 22, 22, 22), duration: 110)
