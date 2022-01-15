@@ -23,3 +23,5 @@ Airport.create(code: 'OOO')
 Airport.create(code: 'PPP')
 Airport.create(code: 'RRR')
 Airport.create(code: 'SSS')
+
+
