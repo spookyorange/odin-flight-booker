@@ -1,0 +1,29 @@
+
+<h1> Hello Project</h1>
+
+<h3>Search For Flights</h3>
+
+<%= simple_form_for :search, method: :get do |f| %>
+  <%= f.input :departure_airport, collection: Airport.all.map {|ai| [ai.code, ai.id]} %><br />
+  <%= f.input :arrival_airport, collection: Airport.all.map {|ai| [ai.code, ai.id]} %><br />
+  <%= f.input :number_of_passengers, collection: 1..4 %><br />
+  <%= f.input :start_date, collection: @start_dates %><br />
+  <%= f.button :submit, "Search" %>
+<% end %>
+
+<div>
+  <% if @flights != nil %>
+    <%= simple_form_for Booking.new, method: :get do |f| %>
+      <% @flights.each do |flight| %>
+        <div style="border: black solid 1px; width: 250px; margin-top: 75px; display: inline-block">
+          <h5><%= flight.departure_airport.code %></h5>
+          <h5><%= flight.arrival_airport.code %></h5>
+          <h5><%= flight.start_date %></h5>
+        </div>
+      <% end %>
+      <br /><br />
+      <%= f.hidden_field :number_of_passengers %>
+      <%= f.button :submit, "attend" %>
+    <% end %>
+  <% end %>
+</div>
