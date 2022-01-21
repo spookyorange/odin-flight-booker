@@ -1,0 +1,13 @@
+<%= simple_form_for :booking, method: :get do |f| %>
+  <% flights.each do |flight| %>
+    <div style="border: black solid 1px; width: 350px; margin-top: 75px; display: inline-block">
+      <h5><%= flight.departure_airport.code %></h5>
+      <h5><%= flight.arrival_airport.code %></h5>
+      <h5><%= flight.start_date %></h5>
+      <%= f.radio_button :flight, flight.id %>
+    </div>
+  <% end %>
+  <br /><br />
+  <%= f.hidden_field :number_of_passengers, value: @no_of_passengers %>
+  <%= f.button :submit, "attend" %>
+<% end %>

@@ -1,0 +1,22 @@
+<br /><br />
+<h3>Departure Airport: <%= booking.flight.departure_airport.code %></h3>
+<h3>Arrival Airpot: <%= booking.flight.arrival_airport.code %></h3>
+<h3>Flight Id: <%= booking.flight.id %></h3>
+<h3>Flight Date: <%= booking.flight.start_date %></h3>
+<br />
+ 
+<% no_of_passengers.to_i.times do |t| %>
+  <% booking.passengers << Passenger.new %>
+<% end %>
+
+<%= simple_form_for booking do |f| %>
+  <%= f.hidden_field :flight_id, value: booking.flight.id %>
+  <% @i = 1 %>
+  <%= f.simple_fields_for :passengers do |passenger_form| %>
+    <h4>Passenger <%= @i %></h4>
+    <% @i += 1 %>
+    <%= passenger_form.input :name %>
+    <%= passenger_form.input :email %>
+  <% end %>
+  <%= f.button :submit %> 
+<% end %>
