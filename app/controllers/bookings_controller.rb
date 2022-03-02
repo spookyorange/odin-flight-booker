@@ -6,6 +6,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     if @booking.save
+      PassengerMailer.with(booking: @booking).regist_mail.deliver_later
       redirect_to @booking
     else
       redirect_to :root
